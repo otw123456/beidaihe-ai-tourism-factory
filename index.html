@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071526" />
+  <meta name="description" content="北戴河AI文旅内容工厂——多智能体协同的文旅内容生产与运营体验平台。" />
+  <title>北戴河AI文旅内容工厂</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23071526'/%3E%3Cpath d='M7 39c10-8 17-8 27 0s17 8 23 1' fill='none' stroke='%2336d9d1' stroke-width='6' stroke-linecap='round'/%3E%3Ccircle cx='43' cy='21' r='9' fill='%23ff8a65'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="返回工作台顶部">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span><b>北戴河</b><small>AI 文旅内容工厂</small></span>
+    </a>
+    <nav class="topnav" aria-label="主导航">
+      <a class="active" href="#factory">创作中心</a>
+      <a href="#agents">智能体矩阵</a>
+      <a href="#skills">Skill中心</a>
+      <a href="#sop">SOP流程</a>
+      <a href="#assets">内容资产</a>
+    </nav>
+    <div class="top-actions">
+      <span class="system-state"><i></i>7个智能体在线</span>
+      <button class="ghost-btn" id="presentationBtn">演示模式</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="factory">
+      <img class="hero-image" src="https://beidaihe-ai-tourism-factory.garden-flea-7455.chatgpt.site/assets/beidaihe-ai-coast.png" alt="晨曦中的北戴河海岸与流动的数据光带" />
+      <div class="hero-overlay"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span>BDH · CULTURE & TOURISM AI ENGINE</span><b>演示数据</b></div>
+        <h1>把一处风景，变成<br><em>一整季的内容影响力</em></h1>
+        <p>从游客洞察到创意策划，从短视频脚本到多平台投放——多智能体协同完成文旅内容生产全链路。</p>
+        <div class="hero-stats" aria-label="平台能力概览">
+          <div><strong>7</strong><span>专业 Agent</span></div>
+          <div><strong>23</strong><span>可调用 Skills</span></div>
+          <div><strong>6</strong><span>标准化 SOP</span></div>
+          <div><strong>12+</strong><span>内容形态</span></div>
+        </div>
+      </div>
+      <div class="signal-card" aria-label="智能体运行态势">
+        <div class="signal-head"><span>AI 协作网络</span><b>LIVE</b></div>
+        <div class="orbit" aria-hidden="true">
+          <div class="core">AI</div>
+          <span class="node n1">洞察</span><span class="node n2">创意</span><span class="node n3">文案</span>
+          <span class="node n4">视觉</span><span class="node n5">分镜</span><span class="node n6">审校</span>
+        </div>
+        <div class="signal-foot"><span>本次任务编排</span><strong>6 Agent · 11 Skills</strong></div>
+      </div>
+    </section>
+
+    <section class="workspace section" aria-labelledby="workspaceTitle">
+      <div class="section-heading">
+        <div><span class="kicker">AI CREATIVE WORKBENCH</span><h2 id="workspaceTitle">一键启动文旅内容生产线</h2></div>
+        <p>选择任务目标，系统将自动装配智能体、Skill 与 SOP。核心编排逻辑已封装，仅展示任务节点与结果。</p>
+      </div>
+
+      <div class="workbench">
+        <form class="brief-panel" id="briefForm">
+          <div class="panel-title"><span>01</span><div><b>创建内容任务</b><small>Creative Brief</small></div><i class="status-pill">待启动</i></div>
+          <fieldset>
+            <legend>目的地场景</legend>
+            <div class="choice-grid destinations">
+              <label><input type="radio" name="place" value="鸽子窝日出" checked><span>鸽子窝日出</span></label>
+              <label><input type="radio" name="place" value="海滨慢生活"><span>海滨慢生活</span></label>
+              <label><input type="radio" name="place" value="候鸟观赏季"><span>候鸟观赏季</span></label>
+              <label><input type="radio" name="place" value="亲子研学"><span>亲子研学</span></label>
+            </div>
+          </fieldset>
+          <div class="form-row">
+            <label>目标人群<select id="audience"><option>京津冀年轻客群</option><option>亲子家庭</option><option>银发康养客群</option><option>高校学生</option><option>摄影爱好者</option></select></label>
+            <label>主投平台<select id="channel"><option>抖音 / 视频号</option><option>小红书</option><option>微信公众号</option><option>全媒体矩阵</option></select></label>
+          </div>
+          <div class="form-row">
+            <label>内容任务<select id="format"><option>城市短视频 campaign</option><option>三集文旅微短剧</option><option>小红书种草矩阵</option><option>节庆整合传播</option></select></label>
+            <label>创意气质<select id="tone"><option>年轻 · 治愈 · 电影感</option><option>浪漫 · 松弛 · 高级感</option><option>亲子 · 自然 · 探索感</option><option>文化 · 历史 · 叙事感</option></select></label>
+          </div>
+          <label class="brief-text">补充目标<textarea id="objective" rows="3" placeholder="例如：希望突出北戴河清晨的松弛感，形成可连续发布7天的内容主题。">打造“到北戴河，把时间还给自己”秋季内容主题，形成可持续发布的短视频与图文矩阵。</textarea></label>
+          <button class="run-btn" type="submit"><span class="run-icon">✦</span><span><b>启动多智能体创作</b><small>预计生成 6 组内容资产</small></span><i>→</i></button>
+          <p class="demo-note">本体验使用模拟数据；不展示内部提示词、模型参数及核心工作流。</p>
+        </form>
+
+        <div class="flow-panel" id="flowPanel">
+          <div class="panel-title"><span>02</span><div><b>智能体协作链路</b><small>Agent Orchestration</small></div><i class="status-pill cyan" id="flowStatus">等待任务</i></div>
+          <div class="flow-map" id="flowMap">
+            <div class="flow-line" aria-hidden="true"></div>
+            <article class="flow-step" data-step="0"><span class="agent-avatar">洞</span><div><b>游客洞察 Agent</b><small>客群偏好 · 平台语境 · 情绪触点</small></div><i>01</i></article>
+            <article class="flow-step" data-step="1"><span class="agent-avatar coral">知</span><div><b>文旅知识 Agent</b><small>城市知识 · 场景要素 · 文化核验</small></div><i>02</i></article>
+            <article class="flow-step" data-step="2"><span class="agent-avatar purple">创</span><div><b>创意总监 Agent</b><small>主题策略 · 内容母题 · 创意钩子</small></div><i>03</i></article>
+            <article class="flow-step" data-step="3"><span class="agent-avatar blue">编</span><div><b>编剧分镜 Agent</b><small>叙事结构 · 镜头脚本 · 节奏设计</small></div><i>04</i></article>
+            <article class="flow-step" data-step="4"><span class="agent-avatar gold">视</span><div><b>视觉设计 Agent</b><small>画面风格 · 海报方向 · 资产适配</small></div><i>05</i></article>
+            <article class="flow-step" data-step="5"><span class="agent-avatar green">审</span><div><b>品牌审校 Agent</b><small>事实检查 · 品牌一致 · 发布建议</small></div><i>06</i></article>
+          </div>
+          <div class="flow-log" id="flowLog"><span>系统</span>等待创作任务，智能体资源池已就绪。</div>
+        </div>
+
+        <div class="result-panel" id="resultPanel">
+          <div class="panel-title"><span>03</span><div><b>内容资产包</b><small>Campaign Output</small></div><button type="button" class="mini-btn" id="copyBtn">复制方案</button></div>
+          <div class="result-tabs" role="tablist" aria-label="内容资产类型">
+            <button class="active" type="button" data-tab="strategy">传播主案</button>
+            <button type="button" data-tab="video">短视频</button>
+            <button type="button" data-tab="drama">微短剧</button>
+            <button type="button" data-tab="social">种草矩阵</button>
+          </div>
+          <div class="result-content" id="resultContent">
+            <div class="empty-result">
+              <div class="pulse-logo">✦</div>
+              <h3>等待生成第一份内容资产</h3>
+              <p>提交任务后，六个专业智能体将依照标准 SOP 协同完成策划。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="agent-section section" id="agents">
+      <div class="section-heading">
+        <div><span class="kicker">MULTI-AGENT TEAM</span><h2>不是一个聊天框，是一支AI内容团队</h2></div>
+        <p>每个智能体只负责自己最擅长的环节，由任务编排引擎分配角色、传递上下文并执行质量门禁。</p>
+      </div>
+      <div class="agent-grid">
+        <article class="agent-card featured"><div class="agent-top"><span>CD</span><i>主智能体</i></div><h3>创意总监 Agent</h3><p>把洞察变成传播母题，统筹内容气质、叙事方向与跨平台一致性。</p><ul><li>Campaign Concept</li><li>Creative Direction</li><li>Quality Gate</li></ul><footer><b>5</b> Skills<span>·</span><b>3</b> SOP节点</footer></article>
+        <article class="agent-card"><div class="agent-top"><span>IA</span><i>洞察层</i></div><h3>游客洞察 Agent</h3><p>识别人群动机、内容偏好与出游决策触点。</p><ul><li>Persona Scan</li><li>Trend Lens</li></ul><footer><b>4</b> Skills<span>·</span><b>12</b> 标签维度</footer></article>
+        <article class="agent-card"><div class="agent-top"><span>KA</span><i>知识层</i></div><h3>文旅知识 Agent</h3><p>组织景点、文化、季节与服务信息，提供可信内容底座。</p><ul><li>Knowledge RAG</li><li>Fact Check</li></ul><footer><b>3</b> Skills<span>·</span><b>4</b> 知识域</footer></article>
+        <article class="agent-card"><div class="agent-top"><span>SA</span><i>生产层</i></div><h3>编剧分镜 Agent</h3><p>把创意转换成可拍摄的结构、台词、镜头与节奏。</p><ul><li>Story Arc</li><li>Shot Planner</li></ul><footer><b>4</b> Skills<span>·</span><b>8</b> 内容模板</footer></article>
+        <article class="agent-card"><div class="agent-top"><span>VA</span><i>视觉层</i></div><h3>视觉设计 Agent</h3><p>生成视觉关键词、构图建议和多规格资产方向。</p><ul><li>Art Direction</li><li>Asset Adapt</li></ul><footer><b>4</b> Skills<span>·</span><b>6</b> 输出规格</footer></article>
+        <article class="agent-card"><div class="agent-top"><span>QA</span><i>治理层</i></div><h3>品牌审校 Agent</h3><p>对事实、语气、敏感表达和品牌一致性进行交付前检查。</p><ul><li>Risk Guard</li><li>Brand Review</li></ul><footer><b>3</b> Skills<span>·</span><b>4</b> 质量门禁</footer></article>
+      </div>
+    </section>
+
+    <section class="skills-section section" id="skills">
+      <div class="section-heading">
+        <div><span class="kicker">SKILL LIBRARY</span><h2>可复用的文旅 Skill 能力库</h2></div>
+        <p>Skill 是经过封装的专项能力。项目按需调用，不公开底层提示词与参数。</p>
+      </div>
+      <div class="skill-console">
+        <div class="skill-nav" role="tablist" aria-label="Skill类别">
+          <button class="active" data-skill-group="strategy">策略洞察 <b>06</b></button>
+          <button data-skill-group="writing">内容创作 <b>08</b></button>
+          <button data-skill-group="visual">视觉生成 <b>05</b></button>
+          <button data-skill-group="governance">质量治理 <b>04</b></button>
+        </div>
+        <div class="skill-list" id="skillList"></div>
+        <div class="skill-detail" id="skillDetail"></div>
+      </div>
+    </section>
+
+    <section class="sop-section section" id="sop">
+      <div class="section-heading light">
+        <div><span class="kicker">STANDARD OPERATING PROCEDURE</span><h2>一套可执行、可复盘、可规模化的内容 SOP</h2></div>
+        <p>把偶然的灵感变成稳定的生产流程，让每一次创作都有明确输入、质量标准与交付物。</p>
+      </div>
+      <div class="sop-track">
+        <article><span>01</span><div class="sop-icon">◎</div><h3>需求解构</h3><p>目标、人群、场景、平台与交付边界结构化。</p><b>Brief Schema</b></article>
+        <i>→</i>
+        <article><span>02</span><div class="sop-icon">⌁</div><h3>知识装配</h3><p>调取目的地知识、季节资源与品牌规范。</p><b>Context Pack</b></article>
+        <i>→</i>
+        <article><span>03</span><div class="sop-icon">✦</div><h3>创意发散</h3><p>并行产生多组母题，并按传播潜力评分。</p><b>Idea Matrix</b></article>
+        <i>→</i>
+        <article><span>04</span><div class="sop-icon">▦</div><h3>内容生产</h3><p>脚本、分镜、文案与视觉方向协同生成。</p><b>Asset Builder</b></article>
+        <i>→</i>
+        <article><span>05</span><div class="sop-icon">◇</div><h3>质量门禁</h3><p>事实、品牌、平台规范和可执行性审校。</p><b>Quality Gate</b></article>
+        <i>→</i>
+        <article><span>06</span><div class="sop-icon">↗</div><h3>矩阵投放</h3><p>一稿多发适配，并沉淀数据反馈用于迭代。</p><b>Growth Loop</b></article>
+      </div>
+      <div class="sop-summary"><span><b>输入</b> 一份结构化任务简报</span><span><b>过程</b> 6个标准节点 · 4道质量门禁</span><span><b>输出</b> 一套跨平台内容资产包</span></div>
+    </section>
+
+    <section class="assets-section section" id="assets">
+      <div class="section-heading">
+        <div><span class="kicker">CONTENT ASSET COCKPIT</span><h2>内容资产运营驾驶舱</h2></div>
+        <p>以下为演示数据，用于呈现从生产、审核到投放复盘的完整运营视角。</p>
+      </div>
+      <div class="asset-dashboard">
+        <div class="metric-stack">
+          <article><span>本月内容资产</span><strong>128<small>件</small></strong><i>完成度 82%</i></article>
+          <article><span>已覆盖内容主题</span><strong>16<small>组</small></strong><i>跨 4 类客群</i></article>
+          <article><span>多平台适配</span><strong>346<small>次</small></strong><i>效率提升 3.2×</i></article>
+        </div>
+        <div class="calendar-card">
+          <div class="dashboard-title"><b>秋季内容节奏编排</b><span>第 3 周 / 演示</span></div>
+          <div class="calendar-row labels"><span>主题</span><span>周一</span><span>周二</span><span>周三</span><span>周四</span><span>周五</span><span>周末</span></div>
+          <div class="calendar-row"><span>候鸟季</span><i class="cyan c2"></i><i></i><i class="cyan"></i><i></i><i class="cyan c2"></i><i class="cyan"></i></div>
+          <div class="calendar-row"><span>日出系列</span><i></i><i class="coral"></i><i class="coral c2"></i><i></i><i class="coral"></i><i class="coral c2"></i></div>
+          <div class="calendar-row"><span>慢生活</span><i class="purple"></i><i></i><i></i><i class="purple c2"></i><i></i><i class="purple"></i></div>
+          <div class="calendar-row"><span>亲子研学</span><i></i><i class="gold"></i><i></i><i class="gold"></i><i class="gold c2"></i><i></i></div>
+        </div>
+        <div class="radar-card">
+          <div class="dashboard-title"><b>内容质量雷达</b><span>AI 审校评分</span></div>
+          <div class="radar-wrap">
+            <div class="radar" aria-label="创意92分、品牌一致88分、平台适配94分、可执行性86分、事实可信96分"><div></div></div>
+            <ul><li><span>创意新鲜度</span><b>92</b></li><li><span>品牌一致性</span><b>88</b></li><li><span>平台适配度</span><b>94</b></li><li><span>拍摄可执行</span><b>86</b></li><li><span>事实可信度</span><b>96</b></li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div><span>BEIDAIHE AI TOURISM CONTENT FACTORY</span><h2>让城市的每一处风景，都拥有持续生长的内容能力。</h2><p>场景体验层开放展示 · 核心智能体编排与知识体系受保护</p></div>
+      <button id="backToTop">返回创作中心 <i>↑</i></button>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
